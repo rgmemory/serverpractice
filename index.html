@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-controller="controller">
+
+    <br>
+
+    <button ng-click="getData()">getData</button>
+    <button ng-click="getCards()">getCards</button>
+    <button ng-click="getNumbers()">numbers</button>
+
+
+    <br>
+
+    <div ng-repeat="user in users">
+      <img src="{{user.avatar}}" alt="">
+      <strong>ID:</strong> {{user.id}}
+      <strong>First Name:</strong> {{user.first_name}}
+      <strong>Last Name: </strong> {{user.last_name}}
+    </div>
+
+    <div ng-repeat="card in cards">
+      {{card.suit}}
+      <img src="{{card.image}}" alt="">
+    </div>
+
+    <div>
+      {{numbers}}
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="service.js"></script>
+    <script src="controller.js"></script>
+
+
+  </body>
+</html>
